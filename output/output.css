@@ -15,6 +15,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --default-transition-duration: 150ms;
@@ -175,6 +177,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .text-green-600 {
+    color: var(--color-green-600);
+  }
 }
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @layer {
@@ -213,35 +218,11 @@
     }
   }
   .header {
-    --tw-gradient-position: to bottom;
-    @supports (background-image: linear-gradient(in lab, red, red)) {
-      --tw-gradient-position: to bottom in oklab;
-    }
-    background-image: linear-gradient(var(--tw-gradient-stops));
+    background-color: #f0ece5;
     padding-inline: calc(var(--spacing) * 4);
-    @media (width >= 64rem) {
-      width: 100%;
-      @media (width >= 40rem) {
-        max-width: 40rem;
-      }
-      @media (width >= 48rem) {
-        max-width: 48rem;
-      }
-      @media (width >= 64rem) {
-        max-width: 64rem;
-      }
-      @media (width >= 80rem) {
-        max-width: 80rem;
-      }
-      @media (width >= 96rem) {
-        max-width: 96rem;
-      }
-    }
-    @media (width >= 64rem) {
-      margin-inline: auto;
-    }
   }
   .nav {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -264,9 +245,10 @@
     }
   }
   .items {
-    display: none;
+    display: flex;
+    flex-direction: column;
     @media (width >= 48rem) {
-      display: flex;
+      flex-direction: row;
     }
     @media (width >= 48rem) {
       align-items: center;
@@ -320,6 +302,46 @@
       @media (hover: hover) {
         color: var(--color-green-600);
       }
+    }
+  }
+  .banner {
+    margin-top: calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 0);
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 20);
+    }
+  }
+  .bannerTitle {
+    margin-inline: auto;
+    width: 100%;
+    text-align: center;
+    @media (width >= 48rem) {
+      width: calc(1/2 * 100%);
+    }
+  }
+  .bannerTitle h1 {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    @media (width >= 48rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
+    }
+  }
+  .bannerTitle p {
+    margin-top: calc(var(--spacing) * 8);
+    padding-bottom: calc(var(--spacing) * 8);
+  }
+  .bannerImg {
+    margin-inline: auto;
+    height: 600px;
+    width: 600px;
+    @media (width >= 48rem) {
+      height: 830px;
+    }
+    @media (width >= 48rem) {
+      width: 830px;
     }
   }
 }
