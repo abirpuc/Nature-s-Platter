@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <title>Nature Platter</title>
 </head>
+
 <body>
-    <h1>Nature Platter</h1>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <span class="h-8">
+                    <img src="./images/logo-header.png" alt="" srcset="">
+                </span>
+            </div>
+            <div>
+                <span class="menuIcon">
+                    <ion-icon class="singleIcon" name="search"></ion-icon>
+                    <ion-icon class="singleIcon" name="cart"></ion-icon>
+                    <ion-icon name="menu-sharp" onclick="menu(this)"></ion-icon>
+                </span>
+            </div>
+            <ul class="items">
+                <li class="singleItem"><a href="#">Product</a></li>
+                <li class="singleItem"><a href="#">Service</a></li>
+                <li class="singleItem"><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="iconDiv">
+                <div class="icons">
+                    <ion-icon class="singleIcon" name="search"></ion-icon>
+                    <ion-icon class="singleIcon" name="cart"></ion-icon>
+                </div>
+                <div>
+                    <button class="loginBtn button">Login</button>
+                    <button class="singupBtn button">Register</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- main section  -->
+    </main>
+    <footer>
+        <!-- footer section  -->
+    </footer>
 </body>
+<script src="./app/app.js"></script>
+
 </html>
